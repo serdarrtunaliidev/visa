@@ -62,3 +62,10 @@ Ayrıca şunları kontrol et:
 - "Sadece bu kodda görünen riskleri yaz" gibi bir kısıt, Copilot'un genel geçer maddeler sıralamasını engeller.
 - Büyük sınıfları metot metot (kodu seçerek) analiz ettirmek daha derin sonuç verir.
 - `/fix` ve `/tests` slash komutları seçili kod üzerinde hızlı sonuç verir.
+
+#file:KartController.java #file:kartDetay.html #file:kartDetay.js
+Kullanıcı bir karta tıkladığında uçtan uca akışı adım adım çıkar:
+Tıklama (HTML/JS) -> istek (URL, parametreler) -> Java endpoint -> service/DAO -> response -> ekranın güncellenmesi.
+Her adım için dosya ve satır/metot ver.
+Katmanlar arası uyumsuzluk var mı kontrol et (parametre adı farkı, beklenen ile dönen veri formatı farkı, null durumları).
+Sequence diagram olarak da ver (Mermaid).
