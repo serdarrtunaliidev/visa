@@ -96,6 +96,39 @@ ve JS değişkenlerine maskesiz yazılan yerleri satır numarasıyla listele.
 
 ---
 
+
+
+## 7) Hassas Veri Kontrolü (Banka Projeleri)
+
+```text
+#file:KartController.java dosyasını analiz et:
+1. Sorumluluğu nedir? Hangi endpoint/metotları, hangi URL ve HTTP metotlarıyla karşılıyor?
+2. Girdi parametreleri nelerdir, nasıl okunup doğrulanıyor?
+3. Hangi service/DAO çağrılıyor, response olarak ne dönüyor (JSON, DTO, view)?
+4. Kart durumuna veya case'e göre karar veren iş kuralları neler?
+5. Null, exception ve boş liste durumları nasıl yönetiliyor?
+6. Singleton sınıfta paylaşılan state (instance değişkeni) var mı?
+Metot adı veya satır numarası vererek açıkla.
+```
+
+#file:kartDetay.html dosyasını analiz et:
+1. Sayfada hangi bölümler, form ve butonlar var? Her butonun id'si ve işi nedir?
+2. Butonların varsayılan durumu (disabled/hidden) nedir, HTML'de sabit mi yoksa dinamik mi?
+3. Hangi elemanlar hangi JS fonksiyonlarına veya URL'lere bağlı (onclick, form action, data-attribute)?
+4. Veri ekrana nasıl basılıyor (template ifadesi, JS ile doldurma)?
+5. Kullanıcı verisi escape edilmeden basılıyor mu (XSS riski)?
+6. Kart numarası gibi hassas veri maskesiz gösteriliyor mu?
+
+#file:kartDetay.js dosyasını analiz et:
+1. Hangi DOM elemanlarına hangi event'ler bağlı?
+2. Hangi URL'lere (fetch/AJAX) hangi parametrelerle istek atıyor, cevabı nasıl işliyor?
+3. DOM'u (buton aktif/pasif, liste, alanlar) hangi koşullara göre değiştiriyor?
+4. Global değişken veya önceki seçimden kalan state var mı?
+5. Hata durumları (başarısız istek, boş cevap) yönetiliyor mu?
+6. Kart numarası, token gibi hassas veri console.log'a veya URL'e yazılıyor mu?
+
+---
+
 ## Verimi Artıran Noktalar
 
 - 5. prompt en değerlisidir, çünkü katmanlar arası uyumsuzluklar tek tek dosya analizinde görünmez.
