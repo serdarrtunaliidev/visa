@@ -57,6 +57,25 @@ Ayrıca şunları kontrol et:
 
 ---
 
+## 5) Token Prompt
+```text
+# Copilot Rules
+- Stack: Java 17, Spring Boot.
+- Answer in Turkish, concisely.
+- Explain only non-obvious logic.
+- Analyze only supplied context.
+- Do not search unrelated files.
+- Follow existing project conventions.
+- Prefer minimal code changes.
+- Show only changed methods when code is requested.
+- Never invent project APIs or business rules.
+- State uncertainty instead of guessing.
+- Max 5 bullets unless more detail is requested.?
+```
+
+---
+
+
 ## Verimi Artıran Noktalar
 
 - "Sadece bu kodda görünen riskleri yaz" gibi bir kısıt, Copilot'un genel geçer maddeler sıralamasını engeller.
